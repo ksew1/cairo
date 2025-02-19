@@ -35,7 +35,7 @@ pub struct SourceCodeSpan {
 #[derive(Clone, Debug, Default, Eq, PartialEq, Serialize, Deserialize)]
 pub struct StatementsSourceCodeLocations {
     pub statements_to_code_location_map:
-        HashMap<StatementIdx, Vec<(SourceFileFullPath, SourceCodeSpan)>>,
+        HashMap<StatementIdx, Vec<(SourceFileFullPath, SourceCodeSpan, bool)>>,
 }
 
 impl From<StatementsSourceCodeLocations> for Annotations {
